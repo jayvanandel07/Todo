@@ -1,0 +1,50 @@
+.todoContainer{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: fit-content;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--Very-Dark-Grayish-Blue);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.todoContainer input{
+    flex-shrink: 0;
+    width: 1.3rem;
+    height: 1.3rem;
+    background-color: transparent;
+    background:linear-gradient(var(--Very-Dark-Desaturated-Blue-clr), var(--Very-Dark-Desaturated-Blue-clr)) padding-box,linear-gradient(90deg, rgba(114,181,245,1) 0%, rgba(164,122,242,1) 100%) border-box;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+
+}
+.todoContainer input:checked{
+    background: linear-gradient(90deg, rgba(114,181,245,1) 0%, rgba(164,122,242,1) 100%) ;
+    border:none;
+    position: relative;
+}
+.todoContainer input:checked:before{
+    content: url("images/icon-check.svg");
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    
+}
+.todoContainer span{
+    max-width: 300px;
+    text-align: left;
+    word-spacing: .2rem;
+    line-height: 1.5rem;
+}
+
+.todoContainer input:checked + span{
+    text-decoration: line-through;
+    color: var(--Very-Dark-Grayish-Blue);
+}
